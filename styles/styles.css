@@ -1,0 +1,86 @@
+
+/*This section gives my header, navigation links, the main text,
+and the footer all one consistent font. It also allows me to chnage the color of the box.*/
+header, nav, main, footer { display: block; }
+body { background-color: #5b7047;
+       font-family: 'Courier New', Monospace;
+}
+#wrapper { width: 960px;
+           margin: auto;
+		   background-color: #db8791;
+		   color: #9d4650;
+		   box-shadow: 5px 5px 5px #47612e;
+}
+
+/*Font styles and color changes for background, box, shadow, etc.*/
+h1 { background-image: url(../images/logo.jpg);
+     background-repeat: no-repeat;
+     background-color: #F4E8BC;
+	 height: 110px;
+	 font-family: Georgia, "Isometra", serif;
+	 font-size: 3.2em;
+     padding-left: 220px;
+	 padding-top: 20px;
+	 text-shadow: 3px 3px 3px #a38c48;
+	 margin-bottom: 0;
+
+}
+
+/*This section styles the navigation section of all the pages in the website*/
+nav { padding-top: 10px;
+      float: left;
+      width: 200px; 
+}
+nav ul { list-style-type: none; 
+       padding-left: 20px;
+	 }
+nav li { padding-bottom: 5px;
+       font-weight: bold;
+}
+nav a { text-decoration: none; }
+nav a:link { color: #4f1227; }
+nav a:visited{ color: #e9bbc6; }
+nav a:hover { color: #511a2f; }
+
+/*the color and margin/padding for the box.*/
+main { background-color: #FFFFCC;
+          margin-left: 200px;
+          padding: 1px 20px 20px 20px;   
+		  min-height: 300px;
+}
+
+/*Placement for image.*/
+main img { float: right;
+              padding: 20px;
+}
+
+/*Tells the html where to place my footer.*/
+footer { background-color: #f0e188;
+       margin-left: 200px;
+       padding: 20px;
+       text-align: center;
+	   font-size: small;
+	   font-style: italic;
+}
+	  
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th,
+td {
+  border: 1px solid #cccccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+thead th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}

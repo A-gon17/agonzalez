@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="This page is the reservations page and includes a table of the prices.">
+   <title>Matcha Bed and Breakfast Hot Matcha Latte reservation</title>
+   <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body>
+   <div id="wrapper">
+  <header>
+      <h1>Matcha Bed and Breakfast</h1>
+  </header>
+  <nav>
+   <ul> 
+      <li><a href="index.html">Home</a></li>
+	   <li><a href="rooms/hot_matcha_latte_room.html">Hot Matcha Latte Room</a></li>
+	   <li><a href="rooms/iced_matcha_latte_room.html">Iced Matcha Latte Room</a></li>
+      <li><a href="bed_and_breakfast_reservations.html">Reservations</a></li>
+	   <li><a href="events/special_events.html">Weekend Events</a></li>
+	   <li><a href="contact.html">Contact</a></li>
+  </ul>
+  </nav>
+  </div>
+   <main>
+   <section>
+      <h2>Room Reservation</h2>
+      <p>Hello! Welcome to the <em>Matcha Bed and Breakfast</em> reservations page!
+         Here we will collect some information to make your experience with us as comfortable as possible. </p>
+      <p>This page holds information that stays private and confidential. Matcha Bed and Breakfast 
+         will not share your contact information with third 
+         parties, <em>ever</em>.
+      </p>
+      
+      <p>Required values are marked by an asterisk (*)</p>
+      
+      <form action="#" method="post">
+         <fieldset id="custInfo">
+            
+            <legend>Guest Information</legend>
+            
+            <div class="formRow">
+               <label for="name">Name*</label>
+               <input name="guestName" id="name" type="text" placeholder="First and last name" required>
+            </div>
+
+            <div class="formRow"> 
+               <label for="phone">Phone number</label>
+               <input name="guestPhone" id="phone" type="tel" placeholder="(nnn) nnn-nnnn"
+                      pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$">
+            </div>
+
+            <div class="formRow"> 
+               <label for="mail">E-mail*</label>
+               <input name="guestEmail" id="mail" type="email" required>
+            </div>
+            
+            <div class="formRow">
+               <label for="info">Where did you hear about us?<br>(Select all that apply)</label>
+               <select name="infoSrc" id="info" size="5" multiple>
+               <option value="internet">Internet</option>
+               <option value="mag">Magazine</option>
+               <option value="news">Newspaper</option>
+               <option value="word">Word of Mouth</option>
+               <option value="other">Other</option>
+               </select>
+            </div>
+            
+            <div class="formRow">
+               <label for="sweetener">What's your favorite way to sweeten your matcha drink?</label>
+               <input name="favSweetener" id="sweetener" type="text" list="sweetnerType">
+               <datalist id="sweetnerType">
+                  <option value="Simple Syrup">
+                  <option value="Agave Nectar">
+                  <option value="Honey">
+                  <option value="Maple Syrup">
+                  <option value="Vanilla Syrup">
+                  <option value="None">
+               </datalist>
+            </div>            
+
+            <div class="formRow">
+               <label for="people">How many people will be staying with us?</label>
+               <input name="guestCount" id="people" type="number" 
+                      value="1" step="1" min="1" max="4">
+            </div>                              
+         </fieldset>
+          
+         <fieldset id="expInfo">
+            <legend>Stay Dates &amp; Preferences</legend>
+            
+            <div class="formRow">
+               <label for="checkIn">Prefered check-in date*</label>
+               <input name="checkInDate" id="checkIn" type="date" required>
+               <label for="checkOut">Check-out date*</label>
+               <input name="checkOutDate" id="checkOut" type="date" required>
+               <p><strong><em>***Make sure to double-check the dates you selected!***</em></strong></p>
+            </div>
+            
+            <div class="formRow">
+               <label for="order">Which room would you like to reserve?</label>
+               <select name="roomType" id="order">
+                  <option value="hotRoom">Hot Matcha Latte Room</option>
+                  <option value="coldRoom">Iced Matcha Latte Room</option>
+                  <option value="bothRooms" selected>Both rooms</option>
+               </select>
+            </div> 
+            
+            <div class="formRow">
+               <label>Would you like us to provide customized cups/mugs for your matcha drinks? ($20 per person)</label>
+               <fieldset class="optGroup">
+                  <label for="fYes">Yes</label>
+                  <input name="customMugs" id="fYes" value="yes" type="radio">
+                  <label for="fNo">No</label>
+                  <input name="customMugs" id="fNo" value="no" type="radio">
+               </fieldset>
+            </div>            
+
+            <div class="formRow">
+               <label>Would you like warmed/cooled pillows for your stay? ($30 per person)</label>
+               <fieldset class="optGroup">
+                  <label for="cYes">Yes</label>
+                  <input name="specialPillows" id="cYes" value="yes" type="radio">
+                  <label for="cNo">No</label>
+                  <input name="specialPillows" id="cNo" value="no" type="radio">
+               </fieldset>
+            </div>
+            
+            <div class="formRow">
+               <label for="rangeBox">How many times do you drink matcha a day?<br>(0 = not much; 10 = a lot)</label>
+               <span>0</span>
+               <input name="matchaFrequency" id="rangeBox" type="range" value="5" step="1" min="0" max="10">
+               <span>10</span>
+            </div>            
+            
+            <div class="formRow">
+               <label for="commBox">Special requests?</label>
+               <textarea name="guestRequest" id="commBox"></textarea>            
+            </div>
+         </fieldset>
+
+         <div id="buttons">
+            <input type="submit" value="Submit My Reservation">
+            <input type="reset" value="Cancel">
+         </div>         
+      </form>
+   </section>
+
+<section aria-labelledby="rates-heading">
+  <h2 id="rates-heading">Room Rates</h2>
+  <table>
+    <caption>Nightly rates by room and season</caption>
+    <thead>
+      <tr>
+        <th scope="col">Room</th>
+        <th scope="col">Standard Season</th>
+        <th scope="col">Peak Season</th>
+        <th scope="col">Max Guests</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Hot matcha latte room</th>
+        <td>$129 / night</td>
+        <td>$179 / night</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th scope="row">Iced matcha latte room</th>
+        <td>$149 / night</td>
+        <td>$199 / night</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th scope="row">Both</th>
+        <td>$229 / night</td>
+        <td>$299 / night</td>
+        <td>4</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+
+</main>
+   <footer>
+      <h2>ABOUT US</h2>
+      <a href="#">Our Story</a> <a href="#">Blog</a>
+      <h2>CUSTOMER SERVICE</h2>
+      <a href="#">Contact Us</a> <a href="#">FAQs</a>
+      <h2>POLICIES</h2>
+      <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a>
+      <address>
+      Matcha Bed and Breakfast <br>
+      2112 Taira, Omachi<br>
+      Omachi, Nagano 398-0001, Japan <br>
+      +81 70-1433-0678
+      </address>
+   </footer>
+</body>
+</html>
